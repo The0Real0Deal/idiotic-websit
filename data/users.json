@@ -1,0 +1,10 @@
+[
+  {
+    "id": "admin-001",
+    "username": "ADMIN",
+    "password": "$2a$10$K8K8K8K8K8K8K8K8K8K8u",
+    "email": "admin@blog.local",
+    "role": "admin",
+    "createdAt": "2024-01-01T00:00:00Z"
+  }
+]

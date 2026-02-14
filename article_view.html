@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>מבט מאמר - הבלוג הלא מושלם שלי</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Heebo:wght@300;400;500;700&amp;family=Assistant:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2badee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Heebo", "sans-serif"],
+                        "body": ["Assistant", "sans-serif"],
+                        "fun": ["Assistant", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        ::selection {
+            background-color: rgba(43, 173, 238, 0.3);
+        }
+        .reading-progress-bar {
+            height: 4px;
+            width: 45%;
+        }
+        .prose p {
+            margin-bottom: 1.85rem;
+            line-height: 1.9;
+            color: #334155;
+            font-size: 1.25rem;
+        }
+        .prose h2 {
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800;
+            font-size: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 1.25rem;
+            color: #1e293b;
+        }
+        .prose blockquote {
+            border-right-width: 4px;
+            border-left-width: 0;
+            padding-right: 2rem;
+            padding-left: 0;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body selection:bg-primary/30">
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+<a class="flex items-center gap-2 text-slate-600 hover:text-primary transition-colors font-semibold group" href="index.html">
+<span class="material-icons text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+<span>חזרה לבית</span>
+</a>
+<div class="hidden md:flex items-center gap-4 text-sm font-medium text-slate-400">
+<span>אמנות הדחיינות המודרנית</span>
+<div class="w-32 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 45%"></div>
+</div>
+<span>7 דקות קריאה</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-icons text-slate-600 dark:text-slate-400">share</span>
+</button>
+<a href="login.html" class="bg-primary text-white px-5 py-2 rounded-full font-bold text-sm shadow-lg shadow-primary/20 hover:scale-105 transition-transform inline-block">
+                הרשמה לניוזלטר
+            </a>
+</div>
+</div>
+<div class="absolute bottom-0 right-0 h-1 bg-primary w-[45%]"></div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-12 lg:py-24 relative">
+<div class="hidden xl:block absolute right-6 top-64 w-48 space-y-32">
+<div class="group">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5 rotate-[3deg] group-hover:rotate-0 transition-transform">
+<img alt="איור של כוס קפה" class="w-16 h-16 object-contain mb-2 mx-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWnxgT8bacvVViDcPGQtwBmauMUIZdZ8Ytw0M8GZVyLqOrtYOYWkM1XbdhAxH6gNuyssHXyS8ZMbN91nXKd4ZFk0IGcQb5WOHibZT3RGj_FPiHrz1sb-F2Z9T_Q36pvg7FKYrGV1RYnQi2MAHn7eOhC25Ta-WkxG4Te1PyrtVqvZZddD3nFta0vOpqVykzPcWxUPZZzUYF8HIla6yJZMEfrSJMPv2AaHlDbw84DblqWox4SjTy3lqZFRGYMOw5sZSJSu85y4TtSqZG"/>
+<p class="text-xs font-fun text-center text-slate-500 italic leading-tight">"הדלק מאחורי כל ה-1500 מילה האלה."</p>
+</div>
+</div>
+<div class="group">
+<div class="bg-primary/5 p-4 rounded-xl border-2 border-dashed border-primary/20 rotate-[-2deg] group-hover:rotate-0 transition-transform text-right">
+<span class="material-icons text-primary text-2xl mb-2">lightbulb</span>
+<p class="text-xs font-display font-bold text-slate-700 dark:text-slate-300 uppercase tracking-tighter mb-1">עובדה מיותרת</p>
+<p class="text-[11px] leading-relaxed text-slate-500">כתבתי את הפסקה הזו בזמן שהפסטה שלי גלשה על הכיריים. סדרי עדיפויות.</p>
+</div>
+</div>
+</div>
+<div class="hidden xl:block absolute left-6 top-48 w-56">
+<div class="sticky top-24 space-y-8">
+<div class="bg-yellow-50 dark:bg-yellow-900/10 p-5 rounded-xl border border-yellow-200 dark:border-yellow-900/30 text-right">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-icons text-yellow-600 text-sm">sticky_note_2</span>
+<h4 class="text-xs font-bold uppercase tracking-widest text-yellow-700 dark:text-yellow-500">תקציר לממהרים (TL;DR)</h4>
+</div>
+<p class="text-sm font-body leading-relaxed text-slate-600 dark:text-slate-400">
+                    תפסיקו לחשוב יותר מדי על שגרת הבוקר שלכם. פשוט תשתו מים, תלטפו את החתול ותתחילו להקליד. הקסם קורה כשמפסיקים לחכות לו.
+                </p>
+</div>
+<div class="p-4 rounded-xl text-center">
+<p class="text-xs font-fun text-slate-400 mb-2">נהניתם מהקריאה?</p>
+<div class="flex justify-center gap-4">
+<a class="text-primary hover:text-primary/70 transition-colors" href="login.html"><span class="material-icons">thumb_up_off_alt</span></a>
+<a class="text-primary hover:text-primary/70 transition-colors" href="login.html"><span class="material-icons">chat_bubble_outline</span></a>
+</div>
+</div>
+</div>
+</div>
+<article class="max-w-3xl mx-auto">
+<header class="mb-12 text-center">
+<div class="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-bold rounded-full mb-6">
+                חיים ופילוסופיה בגרוש
+            </div>
+<h1 class="text-4xl md:text-6xl font-display font-extrabold text-slate-900 dark:text-white leading-[1.2] mb-6">
+                למה הפרפקציוניסט הפנימי שלך הוא בעצם <span class="text-primary">חבלן משועמם מאוד</span>
+</h1>
+<p class="text-xl md:text-2xl font-body text-slate-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+                מדריך לפיטורי המנהל הקטן בתוך הראש שלך שמתעקש לקטלג את הכישלונות שלך לפי צבעים.
+            </p>
+<div class="flex items-center justify-center gap-4 py-8 border-y border-slate-100 dark:border-slate-800">
+<div class="text-right">
+<p class="text-sm font-bold text-slate-900 dark:text-white">מרקוס "לא-מושלם" עט</p>
+<p class="text-xs text-slate-500 font-medium">פורסם ב-24 באוקטובר, 2023 · 12 דקות קריאה</p>
+</div>
+<img alt="דיוקן הכותב" class="w-12 h-12 rounded-full border-2 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3KMMRxxAmQopR9mym2hG-pcZ6do0FHRKtLo2U_ZvBdCTJycreHQtk-izeWmD9Opiim-s5STMS81rf2Uw-iecJRhbjq_ibUAc3s1p80zvnmjZjRmIY07mwOaT5JAPXVS9j36NAWKJZEylBQcuIUEjLVYiPieAMsss14T6-mGOXE6TdWNwi2zaeKLPmkODy4yA4A7xoM0knrZ4hXDfWgPjqck6mG7ns4r6__0Azm2TV2i1PAbfQ00i4pYeqlBqaoNUG_TUlJUC5UiKy"/>
+</div>
+</header>
+<div class="prose prose-slate prose-lg max-w-none font-body dark:prose-invert text-right">
+<p class="text-2xl leading-relaxed font-medium text-slate-700 dark:text-slate-300">
+                כולנו היינו שם. אתם מתיישבים להתחיל את הפרויקט שישנה את העולם, ופתאום, אתם קולטים שבחירת הפונט למסמך סיעור המוחות הפנימי שלכם היא לא מספיק "מעוררת השראה". שלוש שעות לאחר מכן, אתם בוהים בטרנדים של טיפוגרפיה משנת 2004 והפרויקט שלכם הוא עדיין דף ריק לחלוטין.
+            </p>
+<p>
+                פרפקציוניזם הוא לא באמת עניין של סטנדרטים גבוהים. זה פשוט פחד שלובש חליפה יוקרתית. זה המונולוג הפנימי שאומר לכם "אם אני לא יכול לעשות את זה מושלם, עדיף שלא אעשה את זה בכלל", שזה בעצם קוד ל"אני מת מפחד שאנשים יראו אותי מנסה".
+            </p>
+<div class="my-12 relative">
+<img alt="עבודה ממוקדת" class="w-full h-96 object-cover rounded-xl shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDNFHlYT_8gkiS_svh7l5cqkZYO-24sUTnJJ661qs2XshCQvKuYel_z2wk0DhNPEHfzQfLBjOMsq38PeGqEcriN-y3-oMCOamk046UDx6Ho2O3jSq1hdIRtF5wDAJspwzcf9dpcD6cz2h9Qm6dX2fDmgLuYj_Hfz7XhzwlazwMK6m3NNlWwVVEa1-XPp_YyCnpCt89AJra06QiQh5vg2QobeC_EssFcUpabtBZwSTiKAcurPNUm-pRDWo5dURI6MPFjt5k7clzgTri"/>
+<div class="absolute -bottom-4 -left-4 bg-primary text-white p-4 rounded-lg shadow-lg -rotate-2 font-fun text-sm max-w-[200px] text-center">
+                    "השולחן הזה נראה בערך ב-100% יותר מאורגן מהחיים האמיתיים שלי."
+                </div>
+</div>
+<h2>מהפכת ה"טוב מספיק"</h2>
+<p>
+                הסוד להוצאת עבודה לאור הוא אימוץ הבלאגן. הטיוטה הראשונה שלכם אמורה להיות גרועה. למעשה, אם הטיוטה הראשונה לא גורמת לכם להתכווץ קצת במבוכה, כנראה שהשקעתם עליה יותר מדי זמן.
+            </p>
+<ul class="space-y-4 my-8 list-none pr-0">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary flex-shrink-0 mt-1">check_circle</span>
+<span>כתבו בלי לערוך. תנו לשגיאות הכתיב לעוף כמו ציפורים קטנות וכאוטיות.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary flex-shrink-0 mt-1">check_circle</span>
+<span>כוונו טיימר ל-20 דקות. אתם יכולים לעשות הכל במשך 20 דקות, אפילו אם זה גרוע.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary flex-shrink-0 mt-1">check_circle</span>
+<span>זכרו שרוב האנשים עסוקים מדי בבלאגן הפרטי שלהם מכדי לשים לב ל"חוסר השלמות" שלכם.</span>
+</li>
+</ul>
+<blockquote class="border-r-4 border-primary bg-primary/5 p-8 rounded-l-xl italic text-2xl font-display text-slate-700 dark:text-slate-300 my-10">
+                "אל תתנו למושלם להיות האויב של העשוי. וגם, אל תתנו ל'עשוי' להיות האויב של שנת הצהריים שלכם."
+            </blockquote>
+<p>
+                לסיכום, פשוט תתחילו. הליטוש מגיע אחר כך. הגאווה מגיעה מהמאמץ, לא מהיעדר טעויות. עכשיו לכו לעשות את הדבר הזה שדחיתם כי ה"וויב" לא היה בדיוק נכון.
+            </p>
+</div>
+<footer class="mt-20 pt-10 border-t border-slate-200 dark:border-slate-800">
+<div class="bg-slate-900 dark:bg-primary/10 rounded-2xl p-8 text-center text-white">
+<h3 class="text-2xl font-display font-extrabold mb-4">נהניתם מהעצות המעורערות קלות האלה?</h3>
+<p class="text-slate-400 mb-8 max-w-md mx-auto">הצטרפו ל-40,000+ אחרים שמקבלים את הניוזלטר השבועי שלי "לא-כל-כך-מושלם" ישירות לתיבת המייל שלהם.</p>
+<form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+<button class="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-3 rounded-full transition-all active:scale-95" type="submit">
+                        ברור שכן
+                    </button>
+<input class="flex-1 px-5 py-3 rounded-full bg-white/10 border-white/20 text-white text-right placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-primary" dir="rtl" placeholder="המייל הכי טוב שלך..." type="email"/>
+</form>
+</div>
+<div class="mt-12 flex flex-col md:flex-row items-center justify-between gap-8 py-8 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-2 font-bold text-slate-400 hover:text-primary transition-colors" href="index.html">
+<span class="material-icons text-sm">east</span>
+                        לפוסט הקודם
+                    </a>
+<div class="h-6 w-px bg-slate-200"></div>
+<a class="flex items-center gap-2 font-bold text-slate-900 dark:text-white hover:text-primary transition-colors" href="index.html">
+                        לפוסט הבא
+                        <span class="material-icons text-sm">west</span>
+</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 hover:bg-primary hover:text-white transition-all" href="index.html"><span class="material-icons text-xl">facebook</span></a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 hover:bg-primary hover:text-white transition-all" href="login.html"><span class="material-icons text-xl">alternate_email</span></a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 hover:bg-primary hover:text-white transition-all" href="index.html"><span class="material-icons text-xl">language</span></a>
+</div>
+</div>
+<div class="py-12 text-center">
+<p class="text-slate-400 font-fun text-sm italic">תודה שקראתם! אף פרפקציוניסט פנימי לא נפגע במהלך כתיבת המאמר הזה.</p>
+</div>
+</footer>
+</article>
+</main>
+<button class="fixed bottom-8 left-8 w-12 h-12 bg-white dark:bg-slate-800 rounded-full shadow-xl border border-primary/10 flex items-center justify-center text-primary hover:scale-110 transition-transform">
+<span class="material-icons">arrow_upward</span>
+</button>
+
+</body></html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>מילים שנונות | הבלוג האישי שלי</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&amp;family=Heebo:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2badee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                        "mint": "#a7f3d0",
+                        "sun-yellow": "#fef08a",
+                        "royal-purple": "#8b5cf6",
+                    },
+                    fontFamily: {
+                        "display": ["Heebo", "Assistant", "sans-serif"],
+                        "body": ["Assistant", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Assistant', sans-serif;
+        }
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Heebo', sans-serif;
+        }
+        .quirky-border {
+            border: 3px solid #101c22;
+            box-shadow: -4px 4px 0px #101c22;
+        }
+        .quirky-border:hover {
+            transform: translate(2px, -2px);
+            box-shadow: -8px 8px 0px #101c22;
+        }
+        .article-hover:hover .title-text {
+            color: #2badee;
+            padding-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2 group cursor-pointer">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center transform group-hover:-rotate-12 transition-transform">
+<span class="material-icons text-white">emoji_emotions</span>
+</div>
+<span class="text-2xl font-900 tracking-tight text-slate-900 dark:text-white">מילים<span class="text-primary">שנונות.</span></span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-700 hover:text-primary transition-colors" href="/">ארכיון</a>
+<a class="font-700 hover:text-primary transition-colors" href="/">אודות</a>
+<a data-login-btn class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full font-800 shadow-lg shadow-primary/25 transition-all active:scale-95" href="/login">כניסה</a>
+<div data-user-menu class="hidden items-center gap-4">
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-sm font-bold">שלום, <span data-user-name>משתמש</span></p>
+<p class="text-xs text-primary"><span data-user-role>משתמש</span></p>
+</div>
+<button class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition" data-logout-btn title="התנתקות">
+<span class="material-icons">logout</span>
+</button>
+</div>
+<a data-writer-link class="hidden px-4 py-2 bg-primary/10 text-primary rounded-lg font-bold hover:bg-primary/20 transition" href="/code.html">✏️ כתיבה</a>
+<a data-admin-link class="hidden px-4 py-2 bg-red-500/10 text-red-600 rounded-lg font-bold hover:bg-red-500/20 transition" href="/admin/management.html">⚙️ ניהול</a>
+</div>
+</nav>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+<a href="article_view.html" class="relative group cursor-pointer">
+<div class="bg-mint dark:bg-emerald-900/30 p-8 rounded-xl h-full flex flex-col justify-between transition-all duration-300 quirky-border border-slate-900">
+<div>
+<span class="inline-block bg-white dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-1 rounded-full text-sm font-900 mb-6 uppercase tracking-wider border-2 border-slate-900">אחרונים חביבים</span>
+<h2 class="text-4xl md:text-5xl font-900 leading-tight mb-4 text-slate-900 dark:text-white">למה הטוסטר שלי באמת מנסה לחסל אותי</h2>
+<p class="text-xl text-slate-700 dark:text-slate-300 font-600 mb-8 max-w-md">צלילה חקירתית עמוקה אל תוך ההתנהגות החשודה של מכשירי החשמל הביתיים בשעות המוקדמות של יום ראשון בבוקר.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full border-2 border-slate-900 overflow-hidden">
+<img alt="Author" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC90yGNpcZMnnQteZXXgjgt3fqE7Jjsx1cKNBBM_AnGCyjxe53Pc4M4hu21pOVTI1uQm_efSKArX_mD42RIyi2m9yiOBcCRvpT_w-k6j7ZiHw-W2kepUiKj348W2tH0C_cC--JbAXTEwncGYv2vybv5Z5HaPgy6Xcn2P_64Hd7gd2OtGzUgNv57yqCyVhNRCItEVWkB_9lZ7P3Fi82K9Ufw8aIiDKmVpg1A4C63yEIEMU76Cs4StyDNfbCeDpEqiNJbGW-QuHzdoED0"/>
+</div>
+<span class="font-800 text-slate-900 dark:text-white">מאת אלכס פ.</span>
+</div>
+<div class="w-24 h-24 transform group-hover:scale-110 transition-transform">
+<img alt="Toaster" class="rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7AB8FV0gtPHHzXlteYIVolQl8PjovZKsC09gSkSvmzMX6uAn9j1s4Qwf0qwHuHsmpxVzd4p1AZq3_oNbRXqvjDRSFagn4w8UvgHjA8c-RVtee2S2w0Bo96B9QUd62vVq9XzYMnCIg5Swg7gmItp8lYE50cY4I9Yu4plArd10aJcasjNPLPBG-gACSSuOoD3-vToFMKIyApBA9ukIqjrDC2OlIjklBau7Kdm7PgNEZcOMz-b6yByf3vXsewtEYng2a5T8sMAuXRzMi"/>
+</div>
+</div>
+</div>
+</a>
+<a href="article_view.html" class="relative group cursor-pointer">
+<div class="bg-sun-yellow dark:bg-amber-900/30 p-8 rounded-xl h-full flex flex-col justify-between transition-all duration-300 quirky-border border-slate-900">
+<div>
+<span class="inline-block bg-royal-purple text-white px-4 py-1 rounded-full text-sm font-900 mb-6 uppercase tracking-wider border-2 border-slate-900">מומלץ המערכת</span>
+<h2 class="text-4xl md:text-5xl font-900 leading-tight mb-4 text-slate-900 dark:text-white">הפילוסופיה של שנת צהריים בשתיים</h2>
+<p class="text-xl text-slate-700 dark:text-slate-300 font-600 mb-8 max-w-md">להחזיר את הסיאסטה: למה תרבות הפרודוקטיביות משקרת לכם לגבי הכוח של נמנום איכותי ומזיל ריר.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full border-2 border-slate-900 overflow-hidden">
+<img alt="Author" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGfH6Oj3S6FR7TdTBzpyz_tIrMXdLpi-nAsuPSDJw-80Fv0g90sRFcrEvAWFK5RbvA7zjwOUGIAcJ8mqo1z_RG3S6d6s8pitaObLSJvY51cfqbkKOvtvZbukh1uFmNezIrH409rz5nJrnkxzE8HGIBi7z_B7tcZ9Sk755mhXxYbxkBb_K46eQgCJ-AlujEZlDO8yiQZsgvSiW4hkJ-h-rUDHoLZDn6gjMU0oXEQe19a_2EN8GIQSU5FFz1eF1bn30uuk5KTmesj7tl"/>
+</div>
+<span class="font-800 text-slate-900 dark:text-white">מאת אלכס פ.</span>
+</div>
+<div class="w-24 h-24 transform group-hover:rotate-12 transition-transform">
+<img alt="Nap" class="rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9mvI8jsFQY6x1wq0xmgzElcMEleE0PI0mNbTma-NV63R7eY0sI_lLsQ7oMYxQF_OPg3nY0XgwAZcT-dkjAKbdmzZbxL7IqubeSzPoWegoMwKhBKOW5D5GyTzrUZUeLrJSbbrw6Ri7P0faM7bGnhGL439LyRPKvJ4_dYoOdDMfUcWH0y5vCzu5bU5NBhDcITfVD6ACBNU7ySSQMY_OZngqGMV16Deeq9aiJHLTKgKJ1eVwUJoGb9MwNya13FaqXAdtLSmsQ8DS3nAb"/>
+</div>
+</div>
+</div>
+</a>
+</section>
+<section class="max-w-4xl mx-auto">
+<div class="flex items-center gap-4 mb-12">
+<h3 class="text-3xl font-900 text-slate-900 dark:text-white whitespace-nowrap">הארכיון המלא</h3>
+<div class="h-1 flex-grow bg-primary/20 rounded-full"></div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-primary/10 rounded-lg text-primary transition-colors">
+<span class="material-icons">filter_list</span>
+</button>
+<button class="p-2 hover:bg-primary/10 rounded-lg text-primary transition-colors">
+<span class="material-icons">search</span>
+</button>
+</div>
+</div>
+<div class="space-y-2" data-articles-container>
+<a class="article-hover group flex flex-col md:flex-row md:items-center justify-between p-6 rounded-xl hover:bg-white dark:hover:bg-slate-800 border-2 border-transparent hover:border-slate-900 dark:hover:border-primary transition-all duration-300" href="/article_view.html">
+<div class="flex flex-col">
+<span class="text-xs font-900 text-primary uppercase tracking-widest mb-1">סוציולוגיה</span>
+<h4 class="title-text text-2xl font-800 text-slate-900 dark:text-white transition-all duration-300">איך כולם הפכו פתאום למומחים למחמצת</h4>
+</div>
+<div class="flex items-center gap-6 mt-4 md:mt-0">
+<span class="text-slate-500 font-700">24 באוקטובר, 2023</span>
+<span class="material-icons text-slate-300 group-hover:text-primary transition-colors rotate-180">arrow_forward_ios</span>
+</div>
+</a>
+<a class="article-hover group flex flex-col md:flex-row md:items-center justify-between p-6 rounded-xl hover:bg-white dark:hover:bg-slate-800 border-2 border-transparent hover:border-slate-900 dark:hover:border-primary transition-all duration-300" href="/article_view.html">
+<div class="flex flex-col">
+<span class="text-xs font-900 text-royal-purple uppercase tracking-widest mb-1">הומור טכנולוגי</span>
+<h4 class="title-text text-2xl font-800 text-slate-900 dark:text-white transition-all duration-300">החלפתי את המוח שלי ב-ChatGPT ל-24 שעות</h4>
+</div>
+<div class="flex items-center gap-6 mt-4 md:mt-0">
+<span class="text-slate-500 font-700">12 באוקטובר, 2023</span>
+<span class="material-icons text-slate-300 group-hover:text-primary transition-colors rotate-180">arrow_forward_ios</span>
+</div>
+</a>
+<a class="article-hover group flex flex-col md:flex-row md:items-center justify-between p-6 rounded-xl hover:bg-white dark:hover:bg-slate-800 border-2 border-transparent hover:border-slate-900 dark:hover:border-primary transition-all duration-300" href="/article_view.html">
+<div class="flex flex-col">
+<span class="text-xs font-900 text-emerald-500 uppercase tracking-widest mb-1">שיעורים לחיים</span>
+<h4 class="title-text text-2xl font-800 text-slate-900 dark:text-white transition-all duration-300">החרדה הקיומית של עמוד 404</h4>
+</div>
+<div class="flex items-center gap-6 mt-4 md:mt-0">
+<span class="text-slate-500 font-700">28 בספטמבר, 2023</span>
+<span class="material-icons text-slate-300 group-hover:text-primary transition-colors rotate-180">arrow_forward_ios</span>
+</div>
+</a>
+<a class="article-hover group flex flex-col md:flex-row md:items-center justify-between p-6 rounded-xl hover:bg-white dark:hover:bg-slate-800 border-2 border-transparent hover:border-slate-900 dark:hover:border-primary transition-all duration-300" href="/article_view.html">
+<div class="flex flex-col">
+<span class="text-xs font-900 text-amber-500 uppercase tracking-widest mb-1">אוכל</span>
+<h4 class="title-text text-2xl font-800 text-slate-900 dark:text-white transition-all duration-300">האם נקניקייה היא סנדוויץ'? מניפסט של 5,000 מילים</h4>
+</div>
+<div class="flex items-center gap-6 mt-4 md:mt-0">
+<span class="text-slate-500 font-700">15 בספטמבר, 2023</span>
+<span class="material-icons text-slate-300 group-hover:text-primary transition-colors rotate-180">arrow_forward_ios</span>
+</div>
+</a>
+<a class="article-hover group flex flex-col md:flex-row md:items-center justify-between p-6 rounded-xl hover:bg-white dark:hover:bg-slate-800 border-2 border-transparent hover:border-slate-900 dark:hover:border-primary transition-all duration-300" href="/article_view.html">
+<div class="flex flex-col">
+<span class="text-xs font-900 text-primary uppercase tracking-widest mb-1">טיולים</span>
+<h4 class="title-text text-2xl font-800 text-slate-900 dark:text-white transition-all duration-300">המדריך שלי למקומות שבהם אנשים לא מסתכלים עליך</h4>
+</div>
+<div class="flex items-center gap-6 mt-4 md:mt-0">
+<span class="text-slate-500 font-700">30 באוגוסט, 2023</span>
+<span class="material-icons text-slate-300 group-hover:text-primary transition-colors rotate-180">arrow_forward_ios</span>
+</div>
+</a>
+</div>
+<div class="mt-16 flex justify-center">
+<button class="flex items-center gap-2 px-8 py-4 bg-white dark:bg-slate-800 border-2 border-slate-900 dark:border-primary rounded-xl font-900 text-slate-900 dark:text-white hover:bg-primary hover:text-white dark:hover:bg-primary transition-all transform hover:-translate-y-1">
+<span>תראה לי עוד בדיחות</span>
+<span class="material-icons">expand_more</span>
+</button>
+</div>
+</section>
+</main>
+<footer class="bg-slate-900 text-white mt-24 py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+<div class="col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-sm">emoji_emotions</span>
+</div>
+<span class="text-xl font-900 tracking-tight">מילים שנונות.</span>
+</div>
+<p class="text-slate-400 font-600 leading-relaxed mb-6">
+                    בלוג אישי המוקדש למעט אבסורד, הרבה שאלות קיומיות, ומדי פעם מחשבה עמוקה ב-3 לפנות בוקר.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-primary hover:border-primary transition-all" href="login.html">
+<i class="material-icons text-lg">alternate_email</i>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center hover:bg-primary hover:border-primary transition-all" href="index.html">
+<i class="material-icons text-lg">share</i>
+</a>
+</div>
+</div>
+<div class="col-span-1 md:mr-auto">
+<h5 class="text-lg font-900 mb-6">קישורים מהירים</h5>
+<ul class="space-y-4 font-700 text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="index.html">המיטב</a></li>
+<li><a class="hover:text-primary transition-colors" href="index.html">דעות לא פופולריות</a></li>
+<li><a class="hover:text-primary transition-colors" href="login.html">ניוזלטר (בלי ספאם)</a></li>
+<li><a class="hover:text-primary transition-colors" href="login.html">כתבו לנו</a></li>
+</ul>
+</div>
+<div class="col-span-1 md:mr-auto">
+<div class="bg-primary/10 p-6 rounded-xl border border-primary/20">
+<h5 class="text-lg font-900 mb-2">הצטרפו למועדון</h5>
+<p class="text-sm text-slate-400 mb-4 font-600">קבלו את מאמרי ההומור הטובים ביותר למייל פעם בשבוע.</p>
+<div class="flex gap-2">
+<input class="bg-slate-800 border-none rounded-lg px-4 py-2 text-sm w-full focus:ring-2 focus:ring-primary" placeholder="כתובת אימייל" type="email"/>
+<button class="bg-primary px-4 py-2 rounded-lg font-800 text-sm whitespace-nowrap">הצטרפות</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm font-700">
+<p>© 2024 מילים שנונות. כל הזכויות שמורות ליצור אנושי כלשהו.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="index.html">פרטיות</a>
+<a class="hover:text-white transition-colors" href="index.html">תנאי שימוש</a>
+<a class="hover:text-white transition-colors" href="index.html">עוגיות</a>
+</div>
+</div>
+</div>
+</footer>
+<div class="fixed top-40 -right-8 pointer-events-none hidden xl:block opacity-20">
+<span class="material-icons text-primary text-6xl rotate-12">auto_awesome</span>
+</div>
+<div class="fixed bottom-40 -left-8 pointer-events-none hidden xl:block opacity-20">
+<span class="material-icons text-royal-purple text-6xl -rotate-12">celebration</span>
+</div>
+
+<script src="/public/js/api.js"></script>
+<script src="/public/js/ui-helpers.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async function() {
+  // Update auth UI
+  AuthHelper.updateUI();
+  
+  // Logout button
+  const logoutBtn = document.querySelector('[data-logout-btn]');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', async function() {
+      await AuthHelper.logout();
+    });
+  }
+
+  // Load posts dynamically
+  try {
+    const posts = await api.getAllPosts();
+    const archiveContainer = document.querySelector('[data-articles-container]');
+    
+    if (archiveContainer && posts.length > 0) {
+      // Clear existing template articles and add dynamic ones
+      archiveContainer.innerHTML = posts.map(post => `
+        <a class="article-hover group flex flex-col md:flex-row md:items-center justify-between p-6 rounded-xl hover:bg-white dark:hover:bg-slate-800 border-2 border-transparent hover:border-slate-900 dark:hover:border-primary transition-all duration-300" href="/article-view?id=${post.id}">
+          <div class="flex flex-col">
+            <span class="text-xs font-900 text-primary uppercase tracking-widest mb-1">${post.category || 'General'}</span>
+            <h4 class="title-text text-2xl font-800 text-slate-900 dark:text-white transition-all duration-300">${UI.escapeHtml(post.title)}</h4>
+          </div>
+          <div class="flex items-center gap-6 mt-4 md:mt-0">
+            <span class="text-slate-500 font-700">${UI.formatDate(post.createdAt)}</span>
+            <span class="material-icons text-slate-300 group-hover:text-primary transition-colors rotate-180">arrow_forward_ios</span>
+          </div>
+        </a>
+      `).join('');
+    }
+  } catch (err) {
+    console.error('Error loading posts:', err);
+  }
+});
+</script>
+</body></html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Assistant:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2badee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Assistant", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Assistant', 'Plus Jakarta Sans', sans-serif;
+        }
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #2badee;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #2badee;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen text-slate-800 dark:text-slate-200">
+<!-- Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 py-4">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-icons">auto_stories</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-primary">בלוג מצחיק</span>
+</div>
+<div class="hidden md:flex gap-6 text-sm font-semibold">
+<a class="text-primary border-b-2 border-primary pb-1" href="#">ניהול משתמשים</a>
+<a class="hover:text-primary transition-colors" href="#">פוסטים</a>
+<a class="hover:text-primary transition-colors" href="#">תגובות</a>
+<a class="hover:text-primary transition-colors" href="#">סטטיסטיקה</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:block text-left ml-4">
+<p class="text-xs text-slate-500">שלום, אדמין</p>
+<p class="text-sm font-bold italic">המלך של האינטרנט</p>
+</div>
+<img alt="Admin Avatar" class="w-10 h-10 rounded-full border-2 border-primary/20 p-0.5 object-cover" data-alt="Avatar of a smiling admin user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOmGGjRTTAEBmaoTT4K5bv6yhgXc7i_D75vtsG_DP7xSIXRh4Ga76FUe4w7Hwvo8Jsa9GjoFl9PEMXKkrOdIdRphgBxIon9b3UseP4IhAIatpKrSrB5V4mmpGU0gWPhbz1wAu7AyrmpJNqag0OpuaN-yqOZMiwuRiZWxBiH9O5WgHvRHB1qPdbbVK2HAT0c00JTwTb3PSTz4xrVjYwJWWUL7rEv0gFCLuzKE7rVoZ7BFLa11LA2k75j5G29NreVfb1K5IH9oBV9N7H"/>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-10">
+<!-- Playful Header -->
+<header class="mb-10 space-y-2">
+<div class="flex items-center gap-3 mb-2">
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full uppercase tracking-wider">פאנל ניהול</span>
+<span class="text-slate-400 text-sm italic">| המקום שבו מחליטים מי מצחיק ומי לא</span>
+</div>
+<h1 class="text-4xl font-extrabold text-slate-900 dark:text-white">ניהול משתמשים והרשאות</h1>
+<p class="text-slate-600 dark:text-slate-400 max-w-2xl">אל תשכח, עם כוח גדול מגיעה אחריות גדולה... או לפחות היכולת לחסום אנשים שכותבים בדיחות קרש.</p>
+</header>
+<!-- Search and Action Bar -->
+<div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-6">
+<div class="relative w-full md:w-96">
+<span class="material-icons absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pr-10 pl-4 py-3 bg-white dark:bg-slate-800 border-none rounded-xl shadow-sm focus:ring-2 focus:ring-primary/50 transition-all outline-none" placeholder="חפש משתמש לפי שם או אימייל..." type="text"/>
+</div>
+<div class="flex gap-3 w-full md:w-auto">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 bg-white dark:bg-slate-800 border border-primary/10 rounded-xl font-semibold hover:bg-slate-50 transition-colors">
+<span class="material-icons text-sm">filter_list</span>
+                    סינון
+                </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 px-8 py-3 bg-primary text-white rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+<span class="material-icons">save</span>
+                    שמור שינויים
+                </button>
+</div>
+</div>
+<!-- Users Table Container -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-xl shadow-slate-200/50 dark:shadow-none overflow-hidden border border-slate-100 dark:border-slate-800">
+<table class="w-full text-right">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-100 dark:border-slate-800">
+<th class="px-6 py-4 font-bold text-slate-600 dark:text-slate-400 text-sm">משתמש</th>
+<th class="px-6 py-4 font-bold text-slate-600 dark:text-slate-400 text-sm">אימייל</th>
+<th class="px-6 py-4 font-bold text-slate-600 dark:text-slate-400 text-sm">תאריך הרשמה</th>
+<th class="px-6 py-4 font-bold text-slate-600 dark:text-slate-400 text-sm">סטטוס</th>
+<th class="px-6 py-4 font-bold text-slate-600 dark:text-slate-400 text-sm text-center">הרשאת כותב</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<!-- User Row 1 -->
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+                                    אב
+                                </div>
+<span class="font-bold text-slate-900 dark:text-white">אורי בן-דוד</span>
+</div>
+</td>
+<td class="px-6 py-5 text-slate-600 dark:text-slate-400 font-medium">uri.bd@example.com</td>
+<td class="px-6 py-5 text-slate-500 text-sm">12/03/2024</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">פעיל</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex justify-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:-translate-x-full rtl:peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</td>
+</tr>
+<!-- User Row 2 -->
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 font-bold">
+                                    נל
+                                </div>
+<span class="font-bold text-slate-900 dark:text-white">נועה לוי</span>
+</div>
+</td>
+<td class="px-6 py-5 text-slate-600 dark:text-slate-400 font-medium">noa.levi@example.com</td>
+<td class="px-6 py-5 text-slate-500 text-sm">10/03/2024</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">פעיל</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex justify-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:-translate-x-full rtl:peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</td>
+</tr>
+<!-- User Row 3 -->
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+                                    יש
+                                </div>
+<span class="font-bold text-slate-900 dark:text-white">ישראל ישראלי</span>
+</div>
+</td>
+<td class="px-6 py-5 text-slate-600 dark:text-slate-400 font-medium">israel@funnyblog.co.il</td>
+<td class="px-6 py-5 text-slate-500 text-sm">05/03/2024</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">ממתין</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex justify-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:-translate-x-full rtl:peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</td>
+</tr>
+<!-- User Row 4 -->
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 font-bold">
+                                    מכ
+                                </div>
+<span class="font-bold text-slate-900 dark:text-white">משה כהן</span>
+</div>
+</td>
+<td class="px-6 py-5 text-slate-600 dark:text-slate-400 font-medium">moshe@gmail.com</td>
+<td class="px-6 py-5 text-slate-500 text-sm">01/01/2024</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400">חסום</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex justify-center">
+<label class="relative inline-flex items-center cursor-pointer opacity-50 cursor-not-allowed">
+<input class="sr-only peer" disabled="" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 rounded-full peer dark:bg-slate-700 after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600"></div>
+</label>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Pagination-like Footer -->
+<div class="px-6 py-4 bg-slate-50 dark:bg-slate-800/30 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-sm">
+<div class="text-slate-500">
+                    מציג <span class="font-bold">1-4</span> מתוך <span class="font-bold">124</span> משתמשים
+                </div>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-white transition-colors disabled:opacity-50" disabled="">
+<span class="material-icons text-sm">chevron_right</span>
+</button>
+<button class="w-8 h-8 rounded border border-primary bg-primary text-white flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-white transition-colors">2</button>
+<button class="w-8 h-8 rounded border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-white transition-colors">3</button>
+<button class="w-8 h-8 rounded border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-icons text-sm">chevron_left</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Footer Call to Action -->
+<div class="mt-8 flex flex-col md:flex-row items-center justify-between gap-6 p-6 bg-primary/5 rounded-2xl border border-primary/10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+<span class="material-icons">info</span>
+</div>
+<div>
+<h3 class="font-bold text-lg">סיימת לערוך?</h3>
+<p class="text-slate-600 dark:text-slate-400">אל תשכח לשמור את השינויים לפני שאתה עובר לדף הבא.</p>
+</div>
+</div>
+<div class="flex gap-4 w-full md:w-auto">
+<button class="flex-1 md:flex-none px-8 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-colors">ביטול</button>
+<button class="flex-1 md:flex-none px-12 py-4 bg-primary text-white rounded-xl font-bold shadow-xl shadow-primary/30 hover:scale-105 active:scale-95 transition-all text-lg">שמור שינויים עכשיו</button>
+</div>
+</div>
+<!-- Fun Tip Section -->
+<aside class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+<div class="text-primary mb-3">
+<span class="material-icons">tips_and_updates</span>
+</div>
+<h4 class="font-bold mb-2">טיפ מהמערכת</h4>
+<p class="text-sm text-slate-500">משתמשים שכותבים באותיות גדולות הם בדרך כלל צועקים. מומלץ לא לתת להם הרשאות כתיבה.</p>
+</div>
+<div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+<div class="text-primary mb-3">
+<span class="material-icons">group_add</span>
+</div>
+<h4 class="font-bold mb-2">משתמשים חדשים</h4>
+<p class="text-sm text-slate-500">יש לך 12 משתמשים חדשים שממתינים לאישור. אולי תתן להם צ'אנס?</p>
+</div>
+<div class="p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+<div class="text-primary mb-3">
+<span class="material-icons">security</span>
+</div>
+<h4 class="font-bold mb-2">אבטחה מעל הכל</h4>
+<p class="text-sm text-slate-500">מערכת הניהול מאובטחת באמצעות הומור משובח וקיר אש (אמיתי, לא של הבלוג).</p>
+</div>
+</aside>
+</main>
+<footer class="mt-20 py-10 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-slate-400 text-sm">© 2024 בלוג מצחיק בע"מ. כל הזכויות שמורות (גם אלו שלא מצחיקות).</p>
+</footer>
+</body></html>
