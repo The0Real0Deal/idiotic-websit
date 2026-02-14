@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="he"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>כניסת מחברים | המקלדת השנונה</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Assistant:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2badee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Assistant", "Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0) rotate(-6deg); }
+            50% { transform: translateY(-10px) rotate(-8deg); }
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none select-none">
+<div class="absolute top-10 right-10 text-primary transform rotate-12">
+<span class="material-icons text-8xl">edit_note</span>
+</div>
+<div class="absolute bottom-20 left-20 text-primary transform -rotate-12">
+<span class="material-icons text-9xl">auto_stories</span>
+</div>
+<div class="absolute top-1/4 left-1/4 text-primary/40 transform rotate-6">
+<span class="material-icons text-6xl">format_quote</span>
+</div>
+<div class="absolute bottom-1/4 right-1/4 text-primary/40 transform -rotate-45">
+<span class="material-icons text-5xl">emoji_emotions</span>
+</div>
+</div>
+<div class="relative w-full max-w-md z-10">
+<div class="absolute -top-24 -left-12 hidden lg:block">
+<div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl border-2 border-primary/20 transform -rotate-6 animate-bounce-slow">
+<img alt="איור דמות ידידותית" class="w-24 h-24 rounded-lg object-cover" data-alt="Cute quirky bird illustration with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbg81uOUyu8Sf1aSNXIJ0Ks5eSboZuBH5rO8ST2hUPgYP4XaNnvps7Vvs1kxgoPZDXhMONU5Kewg-F8oYjLkLWIYMzaWi2SeEuBkJpthi6SKsYJQhbs-TyAUtCIWz3EaIevUUjVWI1iD6zzEHvaWmC0k-3I8DpIDX0ZRLHGk7DTKSBztXers5U9CMhvkg2qqq67FhPuQzW1RRQ4shZEV-2qOiumVYb7Xo4JkCshH3MCf2wmBncLvJo4SlWDY85YyBPDPyaAN87tt3F"/>
+<div class="mt-2 text-center text-xs font-bold text-primary uppercase tracking-widest">העורך הראשי</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900 shadow-2xl rounded-xl p-8 border border-primary/10">
+<div class="text-center mb-8">
+<div class="bg-primary/10 inline-flex items-center justify-center p-3 rounded-full mb-4">
+<span class="material-icons text-primary text-3xl">history_edu</span>
+</div>
+<h1 class="text-2xl font-extrabold text-gray-900 dark:text-white mb-2">ברוכים השבים, אשפי מילים!</h1>
+<p class="text-gray-500 dark:text-gray-400">העולם משעמם מדי. תתקנו אותו עם הכתיבה שלכם.</p>
+</div>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mr-1">שם משתמש</label>
+<div class="relative group">
+<div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+<span class="material-icons text-gray-400 group-focus-within:text-primary transition-colors">person</span>
+</div>
+<input class="block w-full pr-11 pl-4 py-3 bg-gray-50 dark:bg-gray-800 border-2 border-transparent focus:border-primary focus:ring-0 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 transition-all duration-200" placeholder="למשל: שייקספיר עם וויי-פיי" required="" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center mr-1">
+<label class="block text-sm font-semibold text-gray-700 dark:text-gray-300">סיסמה</label>
+<a class="text-xs font-medium text-primary hover:underline transition-all" href="login.html">שכחתי את הסיסמה המתוחכמת שלי</a>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+<span class="material-icons text-gray-400 group-focus-within:text-primary transition-colors">lock</span>
+</div>
+<input class="block w-full pr-11 pl-12 py-3 bg-gray-50 dark:bg-gray-800 border-2 border-transparent focus:border-primary focus:ring-0 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 transition-all duration-200" placeholder="••••••••" required="" type="password"/>
+<button class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400 hover:text-primary transition-colors" type="button">
+<span class="material-icons text-sm">visibility</span>
+</button>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-primary/30 flex items-center justify-center gap-2" type="submit">
+<span>תכניסו אותי, יש לי בדיחות</span>
+<span class="material-icons text-sm">rocket_launch</span>
+</button>
+</form>
+<div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800 text-center">
+<p class="text-gray-500 dark:text-gray-400 text-sm">
+                עדיין לא בקרקס?
+                <a class="text-primary font-bold hover:underline transition-all mr-1" href="login.html">הצטרפו לחגיגה (הרשמה)</a>
+</p>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-center gap-2 text-gray-400 dark:text-gray-600 text-xs uppercase tracking-widest font-bold">
+<span class="material-icons text-xs">info</span>
+<span>אזהרה: שימוש ממושך עלול לגרום ליצירתיות יתרה</span>
+</div>
+</div>
+<div class="fixed bottom-8 right-8 bg-primary/20 backdrop-blur-md px-4 py-2 rounded-full border border-primary/30 text-primary text-sm font-medium hidden md:flex items-center gap-2">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+    3,241 כותבים מתמהמהים כרגע במקום לעבוד
+</div>
+
+</body></html>
